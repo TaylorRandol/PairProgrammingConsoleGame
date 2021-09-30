@@ -24,6 +24,7 @@ namespace PairProgrammingConsoleGame
                 Console.WriteLine(
                     "Welcome to Pokerish\n\n" +
                     "1. Play New Game\n" +
+                    "2. Play Again\n" +
                     "0. Exit");
 
                 string userInput = Console.ReadLine();
@@ -33,6 +34,10 @@ namespace PairProgrammingConsoleGame
                     case "1":
                         //Play New Game
                         NewGames();
+                        break;
+                    case "2":
+                        //Play Again
+                        PlayAgain();
                         break;
                     case "0":
                         //Exit
@@ -79,7 +84,6 @@ namespace PairProgrammingConsoleGame
                 Test();
 
                 WriteRead();
-
                 Console.WriteLine("Congratulations on rolling dice! You really are the best!\n" +
                     "Have a wonderful day!");
             }
@@ -6877,7 +6881,16 @@ namespace PairProgrammingConsoleGame
             Console.WriteLine($"\n\n 1. {dice[0]}\n 2. {dice[1]}\n 3. {dice[2]}\n 4. {dice[3]}\n 5. {dice[4]}\n");
         }
 
-        
+        private void PlayAgain()
+        {
+            Console.Clear();
+
+            Console.WriteLine("Roll the dice!\n" +
+                "Try to get your best Pokerish Hand!");
+            Console.ReadLine();
+
+            TheActualGame();
+        }
 
     }
 
